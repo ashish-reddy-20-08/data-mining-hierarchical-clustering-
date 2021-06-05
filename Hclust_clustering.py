@@ -1,27 +1,26 @@
 import pandas as pd
 import matplotlib.pylab as plt
 
-Univ1 = pd.read_excel("C:\\Data\\University_Clustering.xlsx")
+data1 = pd.read_excel(" ") #give your file pat
+data1.describe()
+data1.info()
 
-Univ1.describe()
-Univ1.info()
-
-Univ = Univ1.drop(["State"], axis=1)
+data = data1.drop([" "], axis=1) # if you wish to drop any column we can enter the column name in the blank space
 
 # Normalization function 
 def norm_func(i):
     x = (i-i.min())	/ (i.max()-i.min())
     return (x)
 
-# Normalized data frame (considering the numerical part of data)
-df_norm = norm_func(Univ.iloc[:, 1:])
+
+df_norm = norm_func(data.iloc[:, 1:])
 df_norm.describe()
 
-# for creating dendrogram 
+# dendrogram 
 from scipy.cluster.hierarchy import linkage
 import scipy.cluster.hierarchy as sch 
 
-z = linkage(df_norm, method = "complete", metric = "euclidean")
+z = linkage(df_norm, method = "complete", metric = "euclidean") # here i have chossen euclidean but we can choose other distance methods also
 
 # Dendrogram
 plt.figure(figsize=(15, 8));plt.title('Hierarchical Clustering Dendrogram');plt.xlabel('Index');plt.ylabel('Distance')
@@ -32,7 +31,7 @@ sch.dendrogram(z,
 plt.show()
 
 
-# Now applying AgglomerativeClustering choosing 5 as clusters from the above dendrogram
+# AgglomerativeClustering 
 from sklearn.cluster import AgglomerativeClustering
 
 h_complete = AgglomerativeClustering(n_clusters = 3, linkage = 'complete', affinity = "euclidean").fit(df_norm) 
@@ -40,16 +39,16 @@ h_complete.labels_
 
 cluster_labels = pd.Series(h_complete.labels_)
 
-Univ['clust'] = cluster_labels # creating a new column and assigning it to new column 
+data['clust'] = cluster_labels # creating a new column and assigning it to new column 
 
-Univ1 = Univ.iloc[:, [7,0,1,2,3,4,5,6]]
-Univ1.head()
+data1 = data.iloc[:, [7,0,1,2,3,4,5,6]]
+data1.head()
 
-# Aggregate mean of each cluster
-Univ1.iloc[:, 2:].groupby(Univ1.clust).mean()
+# Aggregate mean 
+data1.iloc[:, 2:].groupby(data1.clust).mean()
 
-# creating a csv file 
-Univ1.to_csv("University.csv", encoding = "utf-8")
+# saving the output into csv file 
+data1.to_csv("data.csv", encoding = "utf-8")
 
 import os
 os.getcwd()
