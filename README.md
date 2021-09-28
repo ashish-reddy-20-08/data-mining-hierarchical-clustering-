@@ -13,3 +13,8 @@ Hierarchical clustering starts by treating each observation as a separate cluste
 ## Types of Clustering
 
 ![image](https://user-images.githubusercontent.com/63282184/134457458-2a8f77b6-3b56-476e-9d0b-a61d7cf90bc7.png)
+
+
+**The Hierarchical Clustering can be dived into 2 types:**
+1. Agglomerative Clustering
+2. Divisive Clustering
