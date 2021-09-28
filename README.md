@@ -20,3 +20,15 @@ Hierarchical clustering starts by treating each observation as a separate cluste
 **The Hierarchical Clustering can be dived into 2 types:**
 1. Agglomerative Clustering
 2. Divisive Clustering
+
+
+## How do we measure the similarity between the clusters:
+
+- Measuring the similarity between two clusters is important to merge or divide the clusters. 
+- Some of the approaches which are used to calculate the similarity between two clusters are:
+
+1. **MIN**
+2. **MAX**
+3. **Group Average**
+4. **Distance Between Centroids**
+5. **Ward’s Method**
