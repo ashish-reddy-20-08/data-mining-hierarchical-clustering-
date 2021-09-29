@@ -7,6 +7,8 @@ when we are given a target variable (count and Survival in the above two cases) 
 
 Here, y is our dependent or target variable, and X represents the independent variables. The target variable is dependent on X and hence it is also called a dependent variable. We train our model using the independent variables in the supervision of the target variable and hence the name supervised learning.
 
+Our aim, when training the model, is to generate a function that maps the independent variables to the desired target. Once the model is trained, we can pass new sets of observations and the model will predict the target for them. This, in a nutshell, is supervised learning.
+
 ## Types of Clustering
 
 ![image](https://user-images.githubusercontent.com/63282184/134457458-2a8f77b6-3b56-476e-9d0b-a61d7cf90bc7.png)
