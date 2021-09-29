@@ -1,6 +1,10 @@
 # data-mining-hierarchical-clustering-
 In this code we will be doing hierarchical clustering which is used in data mining 
 
+## Supervised vs Unsupervised
+
+when we are given a target variable (count and Survival in the above two cases) which we have to predict based on a given set of predictors or independent variables (season, holiday, Sex, Age, etc.), such problems are called supervised learning problems.
+
 ## Types of Clustering
 
 ![image](https://user-images.githubusercontent.com/63282184/134457458-2a8f77b6-3b56-476e-9d0b-a61d7cf90bc7.png)
