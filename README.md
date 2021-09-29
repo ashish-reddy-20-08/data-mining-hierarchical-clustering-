@@ -13,6 +13,13 @@ There might be situations when we do not have any target variable to predict. Su
 
 
 
+![image](https://user-images.githubusercontent.com/63282184/135309663-34655ded-2dfb-4997-b355-a37344090d96.png)
+
+
+
+
+
+
 ## Types of Clustering
 
 ![image](https://user-images.githubusercontent.com/63282184/134457458-2a8f77b6-3b56-476e-9d0b-a61d7cf90bc7.png)
