@@ -9,6 +9,10 @@ Here, y is our dependent or target variable, and X represents the independent va
 
 Our aim, when training the model, is to generate a function that maps the independent variables to the desired target. Once the model is trained, we can pass new sets of observations and the model will predict the target for them. This, in a nutshell, is supervised learning.
 
+There might be situations when we do not have any target variable to predict. Such problems, without any explicit target variable, are known as unsupervised learning problems. We only have the independent variables and no target/dependent variable in these problems.
+
+
+
 ## Types of Clustering
 
 ![image](https://user-images.githubusercontent.com/63282184/134457458-2a8f77b6-3b56-476e-9d0b-a61d7cf90bc7.png)
